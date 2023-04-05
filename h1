@@ -1,0 +1,58 @@
+x) Lue ja tiivistä. (Tässä x-alakohdassa ei tarvitse tehdä testejä tietokoneella, vain lukeminen tai kuunteleminen ja tiivistelmä riittää. Tiivistämiseen riittää muutama ranskalainen viiva.)
+
+Karvinen 2023: Create a Web Page Using Github
+
+Verkkosivuston luominen Githubilla on helppoa.
+
+Karvisen ohjeeseen (https://terokarvinen.com/2023/create-a-web-page-using-github/) viitaten tarvitaan vain muutama vaihe:
+
+1. Ensimmäisenä rekisteröidy GitHubiin. Muista hyödyntää opiskelijan edut
+2. Luo uusi "repository" (add README.md file when creating)
+3. Lisää .md tiedosto kotisivuillesi
+4. Lisää hieman tekstiä
+5. Ja sivusi on julkaistu!
+
+
+Karvinen 2023: Salt Vagrant - automatically provision one master and two slaves
+
+Karvisen artikkeliin (1. ttps://terokarvinen.com/2023/salt-vagrant/) pohjautuen:
+
+-Voit hallita satoja tietokoneita
+-Voit jopa konfiguroida tietokoneita, joita ei ole edes vielä olemassa
+
+Voit asentaa virtuaaliympäristön seuraavasti: (1).
+
+$ sudo apt-get update
+$ sudo apt-get -y install virtualbox vagrant micro
+
+$ mkdir saltdemo; cd saltdemo
+$ micro Vagrantfile
+
+Kannattaa myös katsoa valmis koodi (Vagrantfile) kolmelle tietokoneelle tästä linkistä: Ready made Vagrantfile for three computers, https://terokarvinen.com/2023/salt-vagrant/
+
+Seuraavissa vaiheissa opetetaan:
+
+Aja kolmea tietokonetta komennolla $ vagrant up
+
+Accept the Slaves: $ vagrant ssh tmaster
+
+Testaa yhteyksien toimivuutta seuraavilla komennoilla (1):
+
+$ sudo salt '*' test.ping
+t001:
+    True
+t002:
+    True
+    
+
+Lue lisää sivustolta: https://terokarvinen.com/2023/salt-vagrant/
+
+
+
+a) Asenna Debian 11 Vagrantilla.
+
+Asennettu Debianin versio 11
+
+b) Asenna artikkelissa (Karvinen 2023) kuvattu kolmen koneen verkko
+
+Asennettu.
