@@ -1,0 +1,21 @@
+h2 Demonit
+
+x) Lue ja tiivistä. (Tässä x-alakohdassa ei tarvitse tehdä testejä tietokoneella, vain lukeminen tai kuunteleminen ja tiivistelmä riittää. Tiivistämiseen riittää muutama ranskalainen viiva.)
+Karvinen 2018: Pkg-File-Service – Control Daemons with Salt – Change SSH Server Port
+
+-You can control a huge number of daemons with a configuration management system.
+-To use the new configuration after installation, restart the daemon
+-Your package-file-service state is working, if you got the SSH daemon onswer on port 8888.
+
+
+
+a) Asenna OpenSSH-palvelin käsin. Laita se kuuntelemaan oletusportin lisäksi jotain toista porttia. Testaa lopputulos.
+
+Esimerkit ovat todella selkeitä, mutta ei vain toimi. Aloitin klo 10 aamulla ja muutamia ruokataukoja ja rentoutumishetkiä lukuunottamatta kaikki mitä on saatu valmiiksi tänään klo 23:36 mennessä on tässä. Ilmeisesti osoitus siitä että täytyy pysyä lestistään eli yhden palvelimen kanssa.
+
+
+b) Automatisoi äsken tekemäsi SSH-konfiguraatio Saltilla.
+
+c) Tee jokin muu asetus äsken tekemääsi SSH-palveluun. Osoita testein, että Salt käynnistää demonin uudelleen, kun asetustiedosto on muuttunut (jolloin uudet asetukset tulevat voimaan). Osoita, että Saltin ajaminen ei käynnistä demonia uudelleen, jos asetukset eivät ole muuttuneet. (Helpoin asetus on lisätä kolmas portti mukaan, haastavampia löytyy esim 'man sshd_config').
+
+d) Vapaaehtoinen: Säädä jotain toista demonia Saltilla, esim Apache.
